@@ -1,0 +1,108 @@
+#BLFRP {
+  background-color: #f9f9f9;
+}
+
+#HomePage_QWidget {
+  background-color: #f9f9f9;
+}
+
+#Label_user {
+  font-size: 20px;
+  text-align: center;
+}
+
+#Label_name {
+  font-size: 30px;
+  text-align: left;
+  color: #007bff;
+}
+
+#Label_User {
+  font-size: 20px;
+  text-align: left;
+}
+
+#user_QFrame {
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#MapInformation_QFrame {
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#user_h1 {
+  font-size: 17px;
+  text-align: left;
+  font-weight: bold;
+}
+
+#Announcement_QFrame {
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#NoticeToUsers_QFrame {
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#Settings_QFrame {
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+#Concerning_QFrame {
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+#Button_Account {
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 20px;
+  background: #196aa7;
+  border: 0px solid #196aa7;
+}
+
+#Button_Account:hover {
+  background: #b5b5b5;
+}
+
+#h1 {
+  font-size: 30px;
+  text-align: left;
+}
+
+#h2 {
+  font-size: 20px;
+  text-align: left;
+}
+
+#h3 {
+  font-size: 15px;
+  text-align: left;
+}
+
+#h4 {
+  font-size: 10px;
+  text-align: left;
+}
+
+#h10 {
+  font-size: 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+QCheckBox::indicator {
+  width: 60px;
+  height: 30px;
+}
+QCheckBox::indicator:checked {
+  image: url(./Icon/on.png);
+}
+QCheckBox::indicator:unchecked {
+  image: url(./Icon/off.png);
+}

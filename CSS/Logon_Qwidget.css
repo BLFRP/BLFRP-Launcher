@@ -1,0 +1,37 @@
+#Logon_QWidget {
+  background-color: #ffffff;
+}
+
+#Label_Logon {
+  font-size: 25px;
+  color: #ff0000;
+}
+
+#Label_AccessKeys {
+  font-size: 15px;
+  text-align: left;
+}
+
+#Button_Logon_1 {
+  color: #ffffff;
+  border-radius: 15px;
+  font-size: 20px;
+  background: #196aa7;
+  border: 0px solid #196aa7;
+}
+
+#Button_Logon_1:hover {
+  background: #b5b5b5;
+}
+
+#Button_Logon_exit {
+  color: #000000;
+  border-radius: 15px;
+  font-size: 20px;
+  background: #f3f3f3;
+  border: 0px solid #f3f3f3;
+}
+
+#Button_Logon_exit:hover {
+  background: #c5c5c5;
+}

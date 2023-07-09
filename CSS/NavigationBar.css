@@ -1,0 +1,110 @@
+
+#NavigationBar {
+  background: #f1f1f1;
+}
+
+#Button_ClickHome {
+  font-size: 20px;
+  background: #f1f1f1;
+  border: 0px solid #f1f1f1;
+}
+
+#Button_ClickHome:hover {
+  color: #000000;
+  background: #b5b5b5;
+}
+
+#Button_Logon {
+  font-size: 20px;
+  background: #f1f1f1;
+  border: 0px solid #f1f1f1;
+}
+
+#Button_Logon:hover {
+  color: #000000;
+  background: #b5b5b5;
+}
+
+#Button_HomePage {
+  font-size: 20px;
+  background: #f1f1f1;
+  border: 0px solid #f1f1f1;
+}
+
+#Button_HomePage:hover {
+  color: #000000;
+  background: #b5b5b5;
+}
+
+#Button_HomePage:focus {
+  color: #000000;
+  background: #007dfe;
+}
+
+
+#Button_Log {
+  font-size: 20px;
+  background: #f1f1f1;
+  border: 0px solid #f1f1f1;
+}
+
+#Button_Log:hover {
+  color: #000000;
+  background: #b5b5b5;
+}
+
+#Button_Log:focus {
+  color: #000000;
+  background: #007dfe;
+}
+
+
+#Button_Tunnel {
+  font-size: 20px;
+  background: #f1f1f1;
+  border: 0px solid #f1f1f1;
+}
+
+#Button_Tunnel:hover {
+  color: #000000;
+  background: #b5b5b5;
+}
+
+#Button_Tunnel:focus {
+  color: #000000;
+  background: #007dfe;
+}
+
+
+#Button_Settings {
+  font-size: 20px;
+  background: #f1f1f1;
+  border: 0px solid #f1f1f1;
+}
+
+#Button_Settings:hover {
+  color: #000000;
+  background: #b5b5b5;
+}
+
+#Button_Settings:focus {
+  color: #000000;
+  background: #007dfe;
+}
+
+
+#Button_Concerning {
+  font-size: 20px;
+  background: #f1f1f1;
+  border: 0px solid #f1f1f1;
+}
+
+#Button_Concerning:hover {
+  color: #000000;
+  background: #b5b5b5;
+}
+
+#Button_Concerning:focus {
+  color: #000000;
+  background: #007dfe;
+}
