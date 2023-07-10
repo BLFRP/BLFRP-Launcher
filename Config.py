@@ -1,15 +1,19 @@
 import os
 import json
 
+# 程序目录
 PATH = os.getcwd() + "\\"
 
+# CSS文件路径
 BLFRPCss_PATH = PATH + "CSS\\BLFRP.css"
 NavigationBarCss_PATH = PATH + "CSS\\NavigationBar.css"
 Logon_QwidgetCss_PATH = PATH + "CSS\\Logon_Qwidget.css"
 
+# 软件图标
 BLFRPIcon = PATH + "Icon\\BLFRPIcon.png"
 BLFRPLogo = PATH + "Icon\\BLFRPLogo.png"
 
+# 按钮图标
 Button_HomePageIcon = PATH + "Icon\\HomePageIcon.svg"
 Button_LogIcon = PATH + "Icon\\LogIcon.svg"
 Button_TunnelIcon = PATH + "Icon\\TunnelIcon.svg"
@@ -18,6 +22,7 @@ Button_ConcerningIcon = PATH + "Icon\\ConcerningIcon.svg"
 Button_UserIcon = PATH + "Icon\\user.svg"
 Button_ClickHomeIcon = PATH + "Icon\\ClickHome.svg"
 
+# 用户须知
 NotoceToUsers_text = """
 因未阅读网站公告导致的业务损失或奇葩问题,或者没带眼镜提出的问题一律不予回复,多次询问将直接拉黑
 域名需要过白的节点,请联系管理员并注明用途
@@ -35,9 +40,13 @@ NotoceToUsers_text = """
 本软件为开源软件,请从BLFRP官网下载本软件,通过其他渠道下载本软件造成的损失我们概不负责
 """
 
-VERSION = "BLFRP Launcher 1.0.0.0 Bata"
+# 版本信息
+VERSION = "BLFRP 1.0.0.0 Bata"
+
+# 配置文件
 CONFIG_PATH = PATH + "Config\\Config.json"
 USER_CONFIG_PATH = PATH + "Config\\User.json"
+API_CONFIG_PATH = PATH + "Config\\API.json"
 
 User_Json = {
   "KEY": "",
@@ -45,6 +54,7 @@ User_Json = {
   "ID": "",
   "EnrollMail": "",
   "EnrollTime": "",
+  "UsersGroup": "",
 }
 
 
@@ -62,3 +72,7 @@ def Read_Json(path, name1):
   with open(path, "r") as f:
     data = json.load(f)
   return data[name1]
+
+# API访问密钥
+key = Read_Json(API_CONFIG_PATH,"key")
+

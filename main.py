@@ -233,6 +233,8 @@ class GUI(QWidget):
     self.Label_Tunnel = QLabel("隧道",self.Tunnel_QWidget)
     self.Label_Tunnel.setObjectName("h1")
     self.Label_Tunnel.setGeometry(20,10,100,30)
+    for i in Tools.MapInformation_CreateTunnel():
+      pass
 
     # 设置
     self.Settings_QWidget = QWidget(self)
