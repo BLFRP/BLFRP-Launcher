@@ -5,9 +5,9 @@ import json
 PATH = os.getcwd() + "\\"
 
 # CSS文件路径
-BLFRPCss_PATH = PATH + "CSS\\BLFRP.css"
-NavigationBarCss_PATH = PATH + "CSS\\NavigationBar.css"
-Logon_QwidgetCss_PATH = PATH + "CSS\\Logon_Qwidget.css"
+BLFRPQSS_PATH = PATH + "QSS\\BLFRP.qss"
+NavigationBarQSS_PATH = PATH + "QSS\\NavigationBar.qss"
+Logon_QwidgetQSS_PATH = PATH + "QSS\\Logon_Qwidget.qss"
 
 # 软件图标
 BLFRPIcon = PATH + "Icon\\BLFRPIcon.png"
@@ -24,7 +24,7 @@ Button_ClickHomeIcon = PATH + "Icon\\ClickHome.svg"
 
 # 用户须知
 NotoceToUsers_text = """
-因未阅读网站公告导致的业务损失或奇葩问题,或者没带眼镜提出的问题一律不予回复,多次询问将直接拉黑
+因未阅读网站公告导致的业务损失或奇葩问题提出的问题一律不予回复,多次询问直接拉黑
 域名需要过白的节点,请联系管理员并注明用途
 用户速率*带宽倍率=实际获得速率
 带端口限制的节点,指的是远程端口受限,本地端口无任何限制
@@ -48,15 +48,21 @@ CONFIG_PATH = PATH + "Config\\Config.json"
 USER_CONFIG_PATH = PATH + "Config\\User.json"
 API_CONFIG_PATH = PATH + "Config\\API.json"
 
-User_Json = {
-  "KEY": "",
-  "name": "",
-  "ID": "",
-  "EnrollMail": "",
-  "EnrollTime": "",
-  "UsersGroup": "",
-}
+def Create_User_Json(token,name,ID,EnrollMail,EnrollTime,UsersGroup):
+  User_Json = {
+    "Token": token,
+    "name": name,
+    "ID": ID,
+    "EnrollMail": EnrollMail,
+    "EnrollTime": EnrollTime,
+    "UsersGroup": UsersGroup,
+  }
+  return User_Json
 
+def Create_Json(path,data):
+  "创建json格式文件,并写入数据"
+  with open(path, "a") as f:
+    json.dump(data,f,indent=4)
 
 def Write_Json(path, name1, name2):
   "修改Json格式文件"

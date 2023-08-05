@@ -1,3 +1,7 @@
+#h1 {
+  font-size: 25px;
+}
+
 #Logon_QWidget {
   background-color: #ffffff;
 }

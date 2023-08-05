@@ -1,11 +1,11 @@
 import os
-import Config
+import app.Config as Config
 import webbrowser
 import requests
 
 def logon_status():
   "获取用户是否登录"
-  return True
+  # return True
   if (os.path.isfile(Config.USER_CONFIG_PATH)):
     return True
   else:
@@ -14,18 +14,29 @@ def logon_status():
 def Fetch_Announcement():
   "获取网站公告信息"
   try:
-    data = str(requests.post(Config.Read_Json(Config.API_CONFIG_PATH,"api-Announcement"),verify=False,data=Config.key).text)
+    data = str(requests.post(Config.Read_Json(Config.API_CONFIG_PATH,"api-Announcement"),verify=False,data={"key": Config.key}).text)
     return data
   except:
     return "无法连接服务器,可能是您的网络运营商问题"
 
-def Determine_The_Key(key):
-  "获取访问密钥是否正确,key为访问密钥"
-  return True
+def Remove_User():
+  os.remove(Config.USER_CONFIG_PATH)
 
-def Create_User_Config(key):
-  "创建用户并写入json,key为访问密钥"
-  pass
+def Determine_The_Token(Token):
+  "判断访问密钥是否正确,Token为访问密钥"
+  try:
+    data = {"key": Config.key,"Token": str(Token)}
+    return_text = str(requests.post(Config.Read_Json(Config.API_CONFIG_PATH,"api-Token"),verify=False,data=data).text)
+    if (return_text == "True"):
+      return True
+    else:
+      return False
+  except:
+    return False
+
+def Create_User_Config(Token):
+  "创建用户并写入json,Token为访问密钥"
+  Config.Create_Json(Config.USER_CONFIG_PATH, Config.Create_User_Json())
 
 def Click_Home():
   "打开官网"
