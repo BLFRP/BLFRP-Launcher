@@ -1,3 +1,1 @@
-import app.GUI
-import app.Tools
-import app.Config
+from app import GUI,Tools,Config

@@ -8,7 +8,7 @@ import sys
 import app.Config as Config
 import app.Tools as Tools
 
-class GUI(QWidget):
+class Window(QWidget):
   def __init__(self):
     super().__init__()
 
@@ -508,6 +508,6 @@ class GUI(QWidget):
 def main():
 
   app = QApplication(sys.argv)
-  ex = GUI()
+  ex = Window()
   ex.show()
   sys.exit(app.exec())
