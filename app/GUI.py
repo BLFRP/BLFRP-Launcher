@@ -236,8 +236,11 @@ class Window(QWidget):
     self.Label_Tunnel = QLabel("隧道",self.Tunnel_QWidget)
     self.Label_Tunnel.setObjectName("h1")
     self.Label_Tunnel.setGeometry(32,10,100,30)
-    for i in Tools.MapInformation_CreateTunnel():
-      pass
+    self.Label_development_1 = QLabel("正在开发中,敬请期待...",self.Tunnel_QWidget)
+    self.Label_development_1.setObjectName("h2")
+    self.Label_development_1.setGeometry(32,50,200,30)
+    # for i in Tools.MapInformation_CreateTunnel():
+    #   pass
 
     # 设置
     self.Settings_QWidget = QWidget(self)
@@ -318,7 +321,7 @@ class Window(QWidget):
     self.Label_Copyright = QLabel("版权所有",self.Copyright_QFrame)
     self.Label_Copyright.setObjectName("h2")
     self.Label_Copyright.setGeometry(20,5,200,30)
-    self.Label_Copyright_2 = QLabel("@BLFRP 2023",self.Copyright_QFrame)
+    self.Label_Copyright_2 = QLabel("Copyright © 2023 FTSJ Network All Rights reserved",self.Copyright_QFrame)
     self.Label_Copyright_2.setObjectName("h3")
     self.Label_Copyright_2.setGeometry(20,25,200,30)
     self.Indicate_QFrame = QFrame(self.Concerning_QWidget)
@@ -375,6 +378,7 @@ class Window(QWidget):
 
 
   def NavigationBar_Gui(self):
+    "导航栏"
 
     self.NavigationBar = QWidget(self)
     self.NavigationBar.setObjectName("NavigationBar")
@@ -436,8 +440,9 @@ class Window(QWidget):
     self.Button_ClickHome.clicked.connect(lambda: Tools.Click_Home())
 
   def Logon(self):
+    "登陆"
     key = self.Input_Key.text()
-    if (Tools.Determine_The_Tonken(key)):
+    if (Tools.Determine_The_Token(key)):
       # Tools.Create_User_Config(key)
       self.LogonTrue_QWidget = QWidget()
       self.LogonTrue_QWidget.setStyleSheet(self.Logon_Qwidget_date)
@@ -469,6 +474,7 @@ class Window(QWidget):
 
   
   def Switch_To_HomePage_Gui(self):
+    "切换页面为首页"
     self.HomePage_QWidget.show()
     self.Log_QWidget.hide()
     self.Tunnel_QWidget.hide()
@@ -476,6 +482,7 @@ class Window(QWidget):
     self.Concerning_QWidget.hide()
 
   def Switch_To_Log_Gui(self):
+    "切换页面为日志页"
     self.HomePage_QWidget.hide()
     self.Log_QWidget.show()
     self.Tunnel_QWidget.hide()
@@ -483,6 +490,7 @@ class Window(QWidget):
     self.Concerning_QWidget.hide()
 
   def Switch_To_Tunnel_Gui(self):
+    "切换页面为隧道页"
     self.HomePage_QWidget.hide()
     self.Log_QWidget.hide()
     self.Tunnel_QWidget.show()
@@ -490,6 +498,7 @@ class Window(QWidget):
     self.Concerning_QWidget.hide()
 
   def Switch_To_Settings_Gui(self):
+    "切换页面为设置页"
     self.HomePage_QWidget.hide()
     self.Log_QWidget.hide()
     self.Tunnel_QWidget.hide()
@@ -497,6 +506,7 @@ class Window(QWidget):
     self.Concerning_QWidget.hide()
 
   def Switch_To_Concerning_Gui(self):
+    "切换页面为关于页"
     self.HomePage_QWidget.hide()
     self.Log_QWidget.hide()
     self.Tunnel_QWidget.hide()

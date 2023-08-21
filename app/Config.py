@@ -49,6 +49,9 @@ USER_CONFIG_PATH = PATH + "Config\\User.json"
 API_CONFIG_PATH = PATH + "Config\\API.json"
 
 def Create_User_Json(token,name,ID,EnrollMail,EnrollTime,UsersGroup):
+  """将用户信息转换成json格式,
+  Token为访问密钥,name为用户名,ID为用户ID,
+  EnrollMail为注册邮箱,EnrollTime为注册时间,UsersGroup为用户组"""
   User_Json = {
     "Token": token,
     "name": name,
