@@ -4,7 +4,7 @@ import json
 # 程序目录
 PATH = os.getcwd() + "\\"
 
-# CSS文件路径
+# Q文件路径
 BLFRPQSS_PATH = PATH + "QSS\\BLFRP.qss"
 NavigationBarQSS_PATH = PATH + "QSS\\NavigationBar.qss"
 Logon_QwidgetQSS_PATH = PATH + "QSS\\Logon_Qwidget.qss"
@@ -31,7 +31,7 @@ NotoceToUsers_text = """
 您可不时关注节点列表,节点可能随时上新
 香港及国外节点晚高峰丢包属正常现象,对建站影响不大
 免费节点不保证稳定性,特别是PLC类型节点,但我们建议使用PLC类型节点进行大文件传输.
-使用人数过多的节点,容易造成卡顿,如 泉州 节点,我们无法保证其完全可用性
+使用人数过多的节点,容易造成卡顿,我们无法保证其完全可用性
 节点距离您的地理位置越近,延迟越低
 禁止搭建任何色情,暴力,血腥,或违反国家法律的服务(如外挂软件),查到即封
 仅标明支持建站的节点允许您建站,无注明节点可能无法建站
@@ -49,6 +49,9 @@ USER_CONFIG_PATH = PATH + "Config\\User.json"
 API_CONFIG_PATH = PATH + "Config\\API.json"
 
 def Create_User_Json(token,name,ID,EnrollMail,EnrollTime,UsersGroup):
+  """将用户信息转换成json格式,
+  Token为访问密钥,name为用户名,ID为用户ID,
+  EnrollMail为注册邮箱,EnrollTime为注册时间,UsersGroup为用户组"""
   User_Json = {
     "Token": token,
     "name": name,

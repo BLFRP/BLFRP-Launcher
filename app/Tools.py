@@ -35,7 +35,7 @@ def Determine_The_Token(Token):
     return False
 
 def Create_User_Config(Token):
-  "创建用户并写入json,Token为访问密钥"
+  "创建用户并写入json格式文件,Token为访问密钥"
   Config.Create_Json(Config.USER_CONFIG_PATH, Config.Create_User_Json())
 
 def Click_Home():
